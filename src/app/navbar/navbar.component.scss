@@ -16,3 +16,35 @@
     }
   }
 }
+.list-nav{
+  display: flex;
+  align-items: center;
+  background-color: rgb(170, 42, 67);
+  padding: 20px;
+  gap: 2rem;
+  > ul{
+    display: flex;
+    gap: 2rem;
+    > li{
+      list-style: none;
+      a{
+        text-decoration: none;
+        color: antiquewhite;
+        font-weight: 300;
+        font-size: 1em;
+        transition: .3s all ease-in-out;
+        &:hover{
+          color: #2c2c2c;
+        }
+      }
+      > ul{
+        display: flex;
+        gap: 1rem;
+        > li{
+          list-style: none;
+        }
+      }
+    }
+  }
+}
+

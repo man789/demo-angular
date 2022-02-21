@@ -1,0 +1,10 @@
+<div class="content-title"><h3>Input - Output</h3></div>
+<div class="content-exercices">
+  <div style="border: 1px solid red;padding: 1%;">
+    <p>Bonjour je suis le Parent</p>
+    <p>{{leSalut}}</p>
+    <app-enfant (monEvent)="afficherSalut($event)" nom="{{prenom}}" age="5">
+      <div><p>j'aime jouer dans le sable</p></div>
+    </app-enfant>
+  </div>
+</div>

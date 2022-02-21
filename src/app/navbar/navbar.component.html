@@ -6,6 +6,38 @@
   <a routerLink="demo/demo4">Demo 4 - Attribute Binding</a>
   <a routerLink="demo/demo5">Demo 5 - Pipes</a>
   <a routerLink="demo/demo6">Demo 6 - Directives</a>
+  <a routerLink="demo/demo7">Demo 7 - Structurals Directives</a>
+  <a routerLink="demo/demo8">Demo 8 - Input & Output</a>
   <a routerLink="exercices">Exercices</a>
   <a routerLink="exercices/ex01">ex01 - Bindings & Pipes</a>
 </nav>
+
+<nav class="list-nav">
+  <ul>
+    <li><a routerLink="demo" (click)="toggle()">Demo</a>
+      <ul *ngIf="isVisible">
+        <li *ngFor="let produit of navLink">
+          <a routerLink="{{produit.url}}">{{produit.title}}</a>
+        </li>
+      </ul>
+    </li>
+    <li><a routerLink="exercices" (click)="toggle1()">Exercices</a>
+      <ul *ngIf="isVisible1">
+        <li *ngFor="let produit of navLinkExer">
+          <a routerLink="{{produit.url}}">{{produit.title}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<!-- <nav>
+  <ul>
+    <li *ngFor="let lien of navLink"></li>
+    <a routerLink="{{lien.url}}">{{lien.title}}</a>
+    <ul>
+      <li *ngFor="let child of lien.children">
+        <a routerLink="{{child.url}}">{{child.title}}</a>
+      </li>
+    </ul>
+  </ul>
+</nav> -->

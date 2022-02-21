@@ -1,0 +1,22 @@
+<div class="content-title"><h3>Structurals Directives</h3></div>
+<div class="content-exercices">
+  <div>
+    <h4>Ng If</h4>
+    <p *ngIf="isVisible">Coucou les pipou</p>
+    <button (click)="toggle()">Coucou</button>
+
+    <h4>Ng For</h4>
+    <ul>
+      <li *ngFor="let produit of listeCourse; let i = index">{{i}} - {{produit}}</li>
+    </ul>
+
+    <h4>Ng Switch</h4>
+    <input type="text" [(ngModel)]="maVariable">
+    <div [ngSwitch]="maVariable">
+      <div *ngSwitchCase="1">Coca</div>
+      <div *ngSwitchCase="2">Fanta</div>
+      <div *ngSwitchCase="3">Ice Tea</div>
+      <div *ngSwitchDefault>Entrée invalide</div>
+    </div>
+  </div>
+</div>

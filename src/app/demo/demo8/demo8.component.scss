@@ -1,0 +1,22 @@
+.content-title{
+  background-color: lightgray;
+  padding: 1% 0;
+  h3{
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+.content-exercices{
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  button{
+    padding: 10px 20px;
+    margin: 0 1%;
+  }
+}
+.red{
+  background-color: red;
+}
