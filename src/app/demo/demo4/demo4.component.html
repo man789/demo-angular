@@ -1,0 +1,7 @@
+<div class="content-title"><h3>Attribute Bindings</h3></div>
+<div class="content-exercices">
+  <p>le nombre que vous avez rentrez est : {{monNombre}}</p>
+<input type="number" [(ngModel)]="monNombre" [placeholder]="placeholder">
+
+<button (click)="changerValeur()" [disabled]="monNombre < 30">Button</button>
+</div>

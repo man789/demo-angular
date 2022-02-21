@@ -1,0 +1,11 @@
+<div class="content-title"><h3>Chronometre - Pipe</h3></div>
+<div class="content-exercices">
+  <div>
+    <p>Votre Chrono :  {{sec | convertTime}}</p>
+  </div>
+  <div>
+    <button type="button" value="start" [disabled]="" (click)="startChrono()">Start</button>
+    <button type="button" value="pause" [disabled]="sec < 1" (click)="pauseChrono()">Pause</button>
+    <button type="button" value="reset" [disabled]="sec == 0" (click)="resetChrono()">Reset</button>
+  </div>
+</div>

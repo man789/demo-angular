@@ -1,0 +1,32 @@
+.content-title{
+  background-color: lightgray;
+  padding: 1% 0;
+  h3{
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+.content-exercices{
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  button{
+    padding: 10px 20px;
+    margin: 0 1%;
+    border: none;
+    text-transform: uppercase;
+  }
+  button:nth-of-type(1){
+    background-color: aquamarine;
+  }
+  button:nth-of-type(2){
+    background-color: rgb(54, 117, 96);
+    color: white;
+  }
+  button:nth-of-type(3){
+    background-color: rgb(15, 36, 29);
+    color: white;
+  }
+}
