@@ -32,9 +32,9 @@
 </nav> -->
 <nav class="list-nav">
   <ul>
-    <li *ngFor="let lien of navLink">
+    <li *ngFor="let lien of navLink" (click)="toggle()">
     <a routerLink="{{lien.url}}">{{lien.title}}</a>
-    <ul>
+    <ul *ngIf="isVisible">
       <li *ngFor="let child of lien.children">
         <a routerLink="{{child.url}}">{{child.title}}</a>
       </li>

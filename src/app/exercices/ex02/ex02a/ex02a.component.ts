@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ex02a',
@@ -7,12 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class Ex02aComponent implements OnInit {
   @Input() listAchat : string[] = [];
-  constructor() { }
+  @Output() delete : EventEmitter<number>;
+  item : string = "";
+  constructor() {
+    this.delete = new EventEmitter<number>();
+   }
 
   ngOnInit(): void {
   }
 
-  // ajoutList(item : string){
-  //   this.listAchat.push(item) = document.getElementsByClassName("objetAchete").value;
-  // }
+  envoiId(i:number){
+    this.delete.emit(i);
+  }
+  
 }

@@ -1,6 +1,8 @@
 <div class="content-exercices">
   <h3>Shopping List Enfant</h3>
   <ng-content></ng-content>
-  <input type="text" class="objetAchete">
-  <button type="button" >Ajout Article</button>
+  <div *ngFor="let item of listAchat;let i = index" class="item-panier">
+    <span >{{item}}</span>
+    <button (click)="envoiId(i)" class="btn-panier">Supprimer</button>
+  </div>
 </div>
