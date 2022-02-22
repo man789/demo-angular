@@ -3,7 +3,7 @@
   <div style="border: 1px solid red;padding: 1%;">
     <p>Bonjour je suis le Parent</p>
     <p>{{leSalut}}</p>
-    <app-enfant (monEvent)="afficherSalut($event)" nom="{{prenom}}" age="5">
+    <app-enfant (monEvent)="afficherSalut($event)" nom="{{prenom}}" age="5" [List]="listeHobbies">
       <div><p>j'aime jouer dans le sable</p></div>
     </app-enfant>
   </div>

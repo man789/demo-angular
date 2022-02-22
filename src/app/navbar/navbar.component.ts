@@ -13,33 +13,35 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.navLink = [
-    //   {title : "Demo", url : "/demo", children : [
-    //     {title : " demo - 1", url : "demo/demo1"}, 
-    //     {title : " demo - 2", url : "demo/demo2"},
-    //     {title : " demo - 3", url : "demo/demo3"},
-    //     {title : " demo - 4", url : "demo/demo4"},
-    //     {title : " demo - 5", url : "demo/demo5"},
-    //     {title : " demo - 6", url : "demo/demo6"},
-    //     {title : " demo - 7", url : "demo/demo7"},
-    //   ]},
-    //   {title : " ex01", url : "/exercices", children : [
-    //     {title : " ex01", url : "exercices/ex01"}
-    //   ]}
-    // ];
     this.navLink = [
-      {title : " demo - 1", url : "demo/demo1"}, 
-      {title : " demo - 2", url : "demo/demo2"},
-      {title : " demo - 3", url : "demo/demo3"},
-      {title : " demo - 4", url : "demo/demo4"},
-      {title : " demo - 5", url : "demo/demo5"},
-      {title : " demo - 6", url : "demo/demo6"},
-      {title : " demo - 7", url : "demo/demo7"},
-      {title : " demo - 8", url : "demo/demo8"},
+      {title : "Demo", url : "/demo", children : [
+        {title : " demo - 1", url : "demo/demo1"}, 
+        {title : " demo - 2", url : "demo/demo2"},
+        {title : " demo - 3", url : "demo/demo3"},
+        {title : " demo - 4", url : "demo/demo4"},
+        {title : " demo - 5", url : "demo/demo5"},
+        {title : " demo - 6", url : "demo/demo6"},
+        {title : " demo - 7", url : "demo/demo7"},
+        {title : " demo - 8", url : "demo/demo8"},
+      ]},
+      {title : " Exercices", url : "/exercices", children : [
+        {title : " ex01", url : "exercices/ex01"},
+        {title : " ex02", url : "exercices/ex02"},
+      ]}
     ];
-    this.navLinkExer = [
-      {title : " ex01", url : "exercices/ex01"}, 
-    ];
+    // this.navLink = [
+    //   {title : " demo - 1", url : "demo/demo1"}, 
+    //   {title : " demo - 2", url : "demo/demo2"},
+    //   {title : " demo - 3", url : "demo/demo3"},
+    //   {title : " demo - 4", url : "demo/demo4"},
+    //   {title : " demo - 5", url : "demo/demo5"},
+    //   {title : " demo - 6", url : "demo/demo6"},
+    //   {title : " demo - 7", url : "demo/demo7"},
+    //   {title : " demo - 8", url : "demo/demo8"},
+    // ];
+    // this.navLinkExer = [
+    //   {title : " ex01", url : "exercices/ex01"}, 
+    // ];
   }
   toggle(){
     this.isVisible = !this.isVisible;

@@ -2,4 +2,7 @@
   <p>Bonjour je suis l'enfant et je m'appele {{nom}} et j'ai {{age}} ans</p>
   <ng-content></ng-content>
   <button (click)="saluer()">Saluer</button>
+  <div *ngFor="let hobby of List">
+    {{hobby}}
+  </div>
 </div>

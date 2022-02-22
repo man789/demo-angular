@@ -9,6 +9,7 @@ export class EnfantComponent implements OnInit {
   
   @Input() nom : string = "";
   @Input() age : string = "";
+  @Input() List : string[] = [];
 
   @Output() monEvent : EventEmitter<string>;
 

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Demo8Component implements OnInit {
   prenom : string = "Manuel";
   leSalut : string = "En attente d'un bonjour de l'enfant";
+  listeHobbies : string[] = ["zumba","Dessin", "Code"];
   constructor() { }
 
   ngOnInit(): void {

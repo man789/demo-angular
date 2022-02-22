@@ -12,7 +12,7 @@
   <a routerLink="exercices/ex01">ex01 - Bindings & Pipes</a>
 </nav>
 
-<nav class="list-nav">
+<!-- <nav class="list-nav">
   <ul>
     <li><a routerLink="demo" (click)="toggle()">Demo</a>
       <ul *ngIf="isVisible">
@@ -29,15 +29,16 @@
       </ul>
     </li>
   </ul>
-</nav>
-<!-- <nav>
+</nav> -->
+<nav class="list-nav">
   <ul>
-    <li *ngFor="let lien of navLink"></li>
+    <li *ngFor="let lien of navLink">
     <a routerLink="{{lien.url}}">{{lien.title}}</a>
     <ul>
       <li *ngFor="let child of lien.children">
         <a routerLink="{{child.url}}">{{child.title}}</a>
       </li>
     </ul>
+    </li>
   </ul>
-</nav> -->
+</nav>
