@@ -1,8 +1,8 @@
 <div class="content-exercices">
-  <h3>Shopping List Enfant</h3>
   <ng-content></ng-content>
   <div *ngFor="let item of listAchat;let i = index" class="item-panier">
-    <span >{{item}}</span>
+    <span >{{item.nom}} {{item.quantite}}</span>
     <button (click)="envoiId(i)" class="btn-panier">Supprimer</button>
+    <button (click)="ajoutEl(i)">+</button><button (click)="removeEl(i)">-</button>
   </div>
 </div>

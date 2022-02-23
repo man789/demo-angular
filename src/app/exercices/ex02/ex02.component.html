@@ -1,6 +1,6 @@
 <div class="content-title"><h3>Shopping List</h3></div>
 <div class="content-exercices">
-  <app-ex02a [listAchat]="list" (delete)="supprimer($event)">
+  <app-ex02a [listAchat]="list" (delete)="supprimer($event)" (add1)="addQuantity($event)" (less1)="removeQuantity($event)">
     <div>
       <p>Ma Liste d'Achat</p>
     </div>

@@ -1,0 +1,14 @@
+<div class="content-title"><h3>Services</h3></div>
+<div class="content-exercices">
+  <div *ngIf="connected">
+    <span>Vous etes connecté</span>
+  </div>
+  <div *ngIf="!connected">
+    <span>Vous n'etes pas connecté</span>
+  </div>
+  <div>
+    <input type="text" placeholder="Login" [(ngModel)]="compte">
+    <input type="text" placeholder="Mot de passe" [(ngModel)]="password">
+  </div>
+  <div><button (click)="login()">Se Connecter</button>||<button (click)="logout()">Se Déconnecter</button></div>
+</div>

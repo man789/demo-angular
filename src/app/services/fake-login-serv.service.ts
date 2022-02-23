@@ -8,8 +8,11 @@ export class FakeLoginServService {
   isConnected : boolean = false;
   constructor() { }
 
-  connect() : boolean{
-    this.isConnected = true;
+  connect(login : string, mdp : string) : boolean{
+    // Requete vers la DB, avec les infos utilisateurs
+    if(login === "manu" && mdp === "1234"){
+      this.isConnected = true;
+    }
     return this.isConnected;
   }
 
