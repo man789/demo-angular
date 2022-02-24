@@ -25,7 +25,7 @@ export class Ex02Component implements OnInit {
     this._listService.removeListItem(i);
   }
   addQuantity(i:number){
-    this._listService.addQuantity(i);
+    this._listService.addQuantity(i); // function from service
   }
   removeQuantity(i:number){
     this._listService.removeQuantity(i);

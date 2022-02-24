@@ -24,10 +24,12 @@ export class NavbarComponent implements OnInit {
         {title : "Demo 7 - Structurals Directives", url : "demo/demo7"},
         {title : "Demo 8 - Input & Output", url : "demo/demo8"},
         {title : "Demo 9 - services", url : "demo/demo9"},
+        {title : "Demo 10 - Formulaires", url : "demo/demo10"},
       ]},
       {title : " Exercices", url : "/exercices", children : [
         {title : "Ex01 - Chrono", url : "exercices/ex01"},
         {title : "Ex02 - Ajout Liste", url : "exercices/ex02"},
+        {title : "Ex03 - Formulaires", url : "exercices/ex03"},
       ]}
     ];
     // this.navLink = [

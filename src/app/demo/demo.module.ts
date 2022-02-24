@@ -5,7 +5,7 @@ import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './demo.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { Demo2Component } from './demo2/demo2.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo3Component } from './demo3/demo3.component';
 import { Demo4Component } from './demo4/demo4.component';
 import { Demo5Component } from './demo5/demo5.component';
@@ -16,6 +16,7 @@ import { Demo7Component } from './demo7/demo7.component';
 import { Demo8Component } from './demo8/demo8.component';
 import { EnfantComponent } from './demo8/enfant/enfant.component';
 import { Demo9Component } from './demo9/demo9.component';
+import { Demo10Component } from './demo10/demo10.component';
 
 
 @NgModule({
@@ -31,12 +32,14 @@ import { Demo9Component } from './demo9/demo9.component';
     Demo8Component,
     EnfantComponent,
     Demo9Component,
+    Demo10Component,
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     FormsModule,
     SharedModule,
+    ReactiveFormsModule,
   ],
   exports: [
 
