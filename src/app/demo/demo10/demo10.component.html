@@ -1,42 +1,54 @@
 <div class="content-title"><h3>Demo Formulaires</h3></div>
 <div class="content-exercices">
-<form class="formTest" [formGroup]="monForm" (ngSubmit)="ajouterDemande()"> 
-  <div>
-    <label for="nom">Nom : </label>
-    <input type="text" id="nom" formControlName="nom">
-    <div *ngIf="monForm.get('nom')?.errors?.['required'] && !monForm.get('nom')?.touched" >Le champs n'est pas valide.</div>
-    <div *ngIf="monForm.get('nom')?.errors?.['maxlength']" >Trop de caracteres.</div>
+  <form [formGroup]="monForm" (ngSubmit)="ajouterDemande()">
+    <div>
+      <label for="nom">Nom :</label>
+      <input class="form-control" id="nom" type="text" formControlName="nom" />
+      <div
+        *ngIf="monForm.get('nom')?.errors?.['required'] && monForm.get('nom')?.touched"
+      >
+        Le champs est requis
+      </div>
+      <div *ngIf="monForm.get('nom')?.errors?.['maxlength']">
+        Votre nom est trop long
+      </div>
+    </div>
+  
+    <div>
+      <label for="prenom">Prenom :</label>
+      <input class="form-control" id="prenom" type="text" formControlName="prenom" />
+      <div *ngIf="!monForm.get('prenom')?.valid">Le champs est requis</div>
+    </div>
+  
+    <div>
+      <label for="dateNaissance">Date de Naissance</label>
+      <input class="form-control" id="dateNaissance" type="date" formControlName="dateNaissance" />
+      <div *ngIf="!monForm.get('dateNaissance')?.valid">Le champs est requis</div>
+    </div>
+  
+    <div>
+      <select class="form-control" formControlName="permis">
+        <option value="">Selectionner un permis</option>
+        <option value="A">Permis A</option>
+        <option value="B">Permis B</option>
+        <option value="C">Permis C</option>
+      </select>
+      <div *ngIf="!monForm.get('permis')?.valid">Le champs est requis</div>
+    </div>
+  
+    <div>
+      <label for="plaque">Plaque : </label>
+      <input class="form-control" id="plaque" type="text" formControlName="plaque" />
+      <div *ngIf="monForm.get('plaque')?.errors?.['required']">Le champs est requis</div>
+      <div *ngIf="monForm.get('plaque')?.errors?.['verifplaque'] && monForm.get('plaque')?.value != '' && monForm.get('plaque')?.dirty" >La plaque doit contenir un chiffre, trois lettres, trois chiffres</div>
+    </div>
+    <button type="submit">Ajouter</button>
+  </form>
+  
+  <div *ngFor="let demande of listeDemandes">
+    {{ demande.nom }} {{ demande.prenom }} né le {{ demande.dateDeNaissance }} a
+    fait une demande de permis {{ demande.permis }} pour la plaque :
+    {{ demande.plaque }}
   </div>
-  <div>
-    <label for="prenom">Prenom : </label>
-    <input type="text" id="prenom" formControlName="prenom">
-    <div *ngIf="!monForm.get('prenom')?.valid">Le champs est requis.</div>
-  </div>
-  <div>
-    <label for="dateNaissance">date de Naissance : </label>
-    <input type="date" id="dateNaissance" formControlName="dateNaissance">
-    <div *ngIf="!monForm.get('dateNaissance')?.valid">Le champs est requis.</div>
-  </div>
-  <div>
-    <select formControlName="permis">
-      <option value="">Selectionner un permis</option>
-      <option value="A">Permis A</option>
-      <option value="B">Permis B</option>
-      <option value="C">Permis C</option>
-    </select>
-    <div *ngIf="!monForm.get('permis')?.valid">Le champs est requis.</div>
-  </div>
-  <div>
-    <label for="plaque">Plaque : </label>
-    <input type="text" id="plaque" formControlName="plaque">
-    <div *ngIf="monForm.get('plaque')?.errors?.['required']">Le champs est requis.</div>
-    <div *ngIf="!monForm.get('plaque')?.errors?.['verifPlaque']">La plaque doit contenir 1-AAA-111.</div>
-  </div>
-  <div>
-    <button type="submit">Envoi du formulaire</button>
-  </div>
-</form>
-<div *ngFor="let demande of listeDemandes">
-  {{demande.nom}} - {{demande.prenom}} - {{demande.dateNaissance}} - {{demande.permis}} - {{demande.plaque}}
-</div>
+  
 </div>

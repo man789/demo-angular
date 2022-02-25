@@ -1,11 +1,68 @@
 <div class="content-title"><h3>Exercices Formulaires</h3></div>
 <div class="content-exercices">
-<form >
+<form [formGroup]="monForm" (ngSubmit)="envoiDemande()">
   <div>
     <label for="nis">NIS : </label>
     <input type="text" id="nis" formControlName="nis">
   </div>
+  <div>
+    <label for="nom">Nom : </label>
+    <input type="text" id="nom" formControlName="nom">
+  </div>
+  <div>
+    <label for="prenom">Prenom : </label>
+    <input type="text" id="prenom" formControlName="prenom">
+  </div>
+  <div>
+    <input type="radio" id="homme" formControlName="genre" value="H">
+    <label for="homme">Homme</label>
+    <input type="radio" id="femme" formControlName="genre" value="F">
+    <label for="femme">Femme</label>
+    <input type="radio" id="autre" formControlName="genre" value="A">
+    <label for="autre">Autre</label>
+  </div>
+  <div>
+    <label for="dateNaissance">Date de naissance : </label>
+    <input type="date" id="dateNaissance" formControlName="dateNaissance">
+  </div>
+  <div>
+    <label for="iban">IBAN : </label>
+    <input type="text" id="iban" formControlName="iban">
+  </div>
+  <div>
+    <input type="checkbox" id="address" formControlName="address">
+    <label for="address">Addresse</label>
+  </div>
+  <form [formGroup]="addressForm" *ngIf="monForm.get('address')?.value">
+
+    <div class="checkboxes">
+
+    <div class="addressOk">
+      <div>
+        <label for="rue">Rue : </label>
+        <input type="text" id="rue" formControlName="rue">
+      </div>
+      <div>
+        <label for="numero">N° : </label>
+        <input type="text" id="numero" formControlName="numero">
+      </div>
+      <div>
+        <label for="postal">Code Postal : </label>
+        <input type="text" id="postal" formControlName="postal">
+      </div>
+      <div>
+        <label for="ville">Ville : </label>
+        <input type="text" id="ville" formControlName="ville">
+      </div>
+    </div>
+  </div>
 </form>
+  <div><button type="submit">Envoi</button></div>
+</form>
+
+<div *ngFor="let demande of listePersonne">
+  {{ demande.nom }} {{ demande.prenom }}
+</div>
 </div>
 
 <!-- Mettre en place une page avec un formulaire qui ajoute une personne. On affiche aussi cette liste de personnes.

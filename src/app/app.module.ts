@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { ConvertTimePipe } from './pipes/convert-time.pipe';
 import { ExercicesModule } from './exercices/exercices.module';
+import '@angular/common/locales/global/fr';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,12 @@ import { ExercicesModule } from './exercices/exercices.module';
     ExercicesModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'fr-BE' // 'de-DE' for Germany, 'fr-FR' for France ...
+    }
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
